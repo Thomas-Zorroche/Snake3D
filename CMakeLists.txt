@@ -22,7 +22,9 @@ include_directories(${CMAKE_BINARY_DIR}/src)
 # Define the executable
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
 
-
+# Add Shaders
+file(COPY ${CMAKE_SOURCE_DIR}/res/shaders/
+	DESTINATION ${CMAKE_BINARY_DIR}/res/shaders)
 
 # External libraries
 
