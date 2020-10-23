@@ -71,8 +71,8 @@ int main(void)
     VertexArray cubeVAO;
     VertexBuffer cubeVBO(Cube::Vertices, Cube::getSizeVertices());
     VertexBufferLayout cubeLayout;
-    cubeLayout.Push<float>(3);
-    cubeLayout.Push<float>(1);
+    cubeLayout.Push(3);
+    cubeLayout.Push(1);
     cubeVAO.AddBuffer(cubeVBO, cubeLayout);
     Shader cubeShader("res/shaders/cube.shader");
     
@@ -90,7 +90,7 @@ int main(void)
     VertexArray groundVAO;
     VertexBuffer groundVBO(groundVertices, sizeof(groundVertices));
     VertexBufferLayout groundLayout;
-    groundLayout.Push<float>(2);
+    groundLayout.Push(2);
     groundVAO.AddBuffer(groundVBO, groundLayout);
     IndexBuffer groundIBO(groundIndices, 6);
     groundVAO.Unbind();
